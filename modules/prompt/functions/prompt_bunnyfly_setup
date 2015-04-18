@@ -284,15 +284,16 @@ function prompt_agnoster_setup {
 
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
-# Symbols: ⮁ ⮀ ⮂ ⮃
+# New Symbols:    
+# Old Symbols: ⮁ ⮀ ⮂ ⮃
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR='⮀'
-RSEGMENT_SEPARATOR='⮂'
+SEGMENT_SEPARATOR=''
+RSEGMENT_SEPARATOR=''
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
-#RPROMPT="%{%f%b%k%}%{$fg_no_bold[black]%}⮂%{%f}%{$fg[black]$bg_no_bold[black]%}`date +%Y.%m.%d\\ %H:%M:%S`%{%f%b%k%}"
-#RPROMPT='%{%B%F{black}%k%}⮂%{$[cyan]%}`date +%Y.%m.%d\\ %H:%M:%S`%{%f%b%k%}'
+#RPROMPT="%{%f%b%k%}%{$fg_no_bold[black]%}%{%f}%{$fg[black]$bg_no_bold[black]%}`date +%Y.%m.%d\\ %H:%M:%S`%{%f%b%k%}"
+#RPROMPT='%{%B%F{black}%k%}%{$[cyan]%}`date +%Y.%m.%d\\ %H:%M:%S`%{%f%b%k%}'
 PS2="%{$bg_no_bold[black]%}$SEGMENT_SEPARATOR%{$fg%} "
 #RPROMPT='%{%f%b%k%}$(build_rprompt)'
 
